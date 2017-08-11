@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id="idyll-mount"><div class="idyll-root" data-reactroot="" data-reactid="1" data-react-checksum="-578923093"><div class="article-header" data-reactid="2"><h1 class="hed" data-reactid="3">idyll-p5</h1><h2 class="dek" data-reactid="4">Embed p5.js sketches in idyll!</h2><div class="byline" data-reactid="5"><!-- react-text: 6 -->By: <!-- /react-text --><a href="https://github.com/JobLeonard/idyll-p5" data-reactid="7">Job van der Zwan</a></div></div><p data-reactid="8"><!-- react-text: 9 -->Embed <!-- /react-text --><a href="https://p5js.org/" data-reactid="10"><!-- react-text: 11 -->p5js sketches<!-- /react-text --></a><!-- react-text: 12 --> (relatively) easily in idyll with this custom component! Source code for the component and this page <!-- /react-text --><a href="https://github.com/JobLeonard/idyll-p5" data-reactid="13"><!-- react-text: 14 -->in this github repository<!-- /react-text --></a></p><!-- react-empty: 15 --><pre data-reactid="16"><code data-reactid="17"><!-- react-text: 18 -->[Sketch webGL:1 ratio:1 sketch:`(p5) =&gt; {
+    <div id="idyll-mount"><div class="idyll-root" data-reactroot="" data-reactid="1" data-react-checksum="269435887"><div class="article-header" data-reactid="2"><h1 class="hed" data-reactid="3">idyll-p5</h1><h2 class="dek" data-reactid="4">Embed p5.js sketches in idyll!</h2><div class="byline" data-reactid="5"><!-- react-text: 6 -->By: <!-- /react-text --><a href="https://github.com/JobLeonard/idyll-p5" data-reactid="7">Job van der Zwan</a></div></div><p data-reactid="8"><!-- react-text: 9 -->Embed <!-- /react-text --><a href="https://p5js.org/" data-reactid="10"><!-- react-text: 11 -->p5js sketches<!-- /react-text --></a><!-- react-text: 12 --> (relatively) easily in idyll with this custom component! Source code for the component and this page <!-- /react-text --><a href="https://github.com/JobLeonard/idyll-p5" data-reactid="13"><!-- react-text: 14 -->in this github repository<!-- /react-text --></a></p><!-- react-empty: 15 --><pre data-reactid="16"><code data-reactid="17"><!-- react-text: 18 -->[Sketch webGL:1 ratio:1 sketch:`(p5) =&gt; {
   p5.draw = () =&gt; {
     const frame = p5.frameCount;
     p5.background(250);
@@ -52,16 +52,19 @@
   };
   p5.draw = () =&gt; { /* draw code */ };
   // etc.
-}` /]<!-- /react-text --></code></pre><p data-reactid="92"><!-- react-text: 93 -->any variables that are defineed in the Idyll document are automatically in the scope of the sketch function. So <!-- /react-text --></p><pre data-reactid="94"><code data-reactid="95"><!-- react-text: 96 -->[var name:&quot;x&quot; value:10 ]
+}` /]<!-- /react-text --></code></pre><p data-reactid="92"><!-- react-text: 93 -->any variables that are defineed in the Idyll document are automatically in the scope of the sketch function. So<!-- /react-text --></p><pre data-reactid="94"><code data-reactid="95"><!-- react-text: 96 -->[var name:&quot;x&quot; value:10 ]
 [Sketch sketch:`(p5, { width, height }) =&gt; {
-  p5.draw = () =&gt; { 
+  p5.draw = () =&gt; {
     // you can reference x here
     const xSquared = x * x;
   };
-}` /]<!-- /react-text --></code></pre><p data-reactid="97"><!-- react-text: 98 -->The sketch unmounts and resets in response to resize events to keep a correct size. To try this out, resize the browser window, or switch between portrain/landscape if you are on mobile.<!-- /react-text --></p><p data-reactid="99"><!-- react-text: 100 -->If the sketch needs to run specific code before unmounting the component, define a <!-- /react-text --><code data-reactid="101"><!-- react-text: 102 -->p5.unmount<!-- /react-text --></code><!-- react-text: 103 --> function. If will be triggered just before the component unmounts.<!-- /react-text --></p><span style="color:red;font-style:italic;" data-reactid="104"><!-- react-text: 105 -->[mathisonian note]: <!-- /react-text --><!-- react-text: 106 -->Sorry, I temporarily broke this one.<!-- /react-text --></span><div data-reactid="107"></div><!-- react-empty: 108 --><p data-reactid="109"><!-- react-text: 110 -->Background Color: <!-- /react-text --><input type="range" step="1" min="0" max="255" value="5" data-reactid="111"/><!-- react-text: 112 -->
-Line Color: <!-- /react-text --><input type="range" step="1" min="0" max="255" value="250" data-reactid="113"/></p><p data-reactid="114"><!-- react-text: 115 -->Code for the above demo:<!-- /react-text --></p><pre data-reactid="116"><code data-reactid="117"><!-- react-text: 118 -->[var name:&quot;bgColor&quot; value:5 /]
+}` /]<!-- /react-text --></code></pre><p data-reactid="97"><!-- react-text: 98 -->The sketch unmounts and resets in response to resize events to keep a correct size. To try this out, resize the browser window, or switch between portrain/landscape if you are on mobile.<!-- /react-text --></p><p data-reactid="99"><!-- react-text: 100 -->If the sketch needs to run specific code before unmounting the component, define a <!-- /react-text --><code data-reactid="101"><!-- react-text: 102 -->p5.unmount<!-- /react-text --></code><!-- react-text: 103 --> function. If will be triggered just before the component unmounts.<!-- /react-text --></p><div data-reactid="104"></div><!-- react-empty: 105 --><p data-reactid="106"><!-- react-text: 107 -->Background Color: <!-- /react-text --><input type="range" step="1" min="0" max="255" value="5" data-reactid="108"/><!-- react-text: 109 -->
+Line Color: <!-- /react-text --><input type="range" step="1" min="0" max="255" value="250" data-reactid="110"/></p><p data-reactid="111"><!-- react-text: 112 -->Code for the above demo:<!-- /react-text --></p><pre data-reactid="113"><code data-reactid="114"><!-- react-text: 115 -->[var name:&quot;bgColor&quot; value:5 /]
 [var name:&quot;lineColor&quot; value:250 /]
-[var name:&quot;sketchDemo&quot; value:`(p5, { width, height }) =&gt; {
+
+[Sketch
+  bgColor:bgColor
+  sketch:`(p5, { width, height }) =&gt; {
     let size = 25;
     p5.setup = () =&gt; {
       // no createCanvas required!
@@ -83,11 +86,33 @@ Line Color: <!-- /react-text --><input type="range" step="1" min="0" max="255" v
     }
 }` /]
 
-[Sketch
-  sketch:sketchDemo /]
-
 Background Color: [Range min:0 max:255 value:bgColor /]
-Line Color: [Range min:0 max:255 value:lineColor /]<!-- /react-text --></code></pre><h1 data-reactid="119"><!-- react-text: 120 -->Sketch size and ratio<!-- /react-text --></h1><p data-reactid="121"><!-- react-text: 122 -->By default, the width of the sketch is equal to column width of the text, and height will be half of the width.<!-- /react-text --></p><p data-reactid="123"><!-- react-text: 124 -->You can pass a value to <!-- /react-text --><code data-reactid="125"><!-- react-text: 126 -->width<!-- /react-text --></code><!-- react-text: 127 --> and <!-- /react-text --><code data-reactid="128"><!-- react-text: 129 -->height<!-- /react-text --></code><!-- react-text: 130 --> to override this. The value can be the number of pixels like <!-- /react-text --><code data-reactid="131"><!-- react-text: 132 -->100<!-- /react-text --></code><!-- react-text: 133 -->, or a CSS-valid string like <!-- /react-text --><code data-reactid="134"><!-- react-text: 135 -->&quot;50%&quot;<!-- /react-text --></code><!-- react-text: 136 --> or <!-- /react-text --><code data-reactid="137"><!-- react-text: 138 -->&quot;2em&quot;<!-- /react-text --></code><!-- react-text: 139 -->.<!-- /react-text --></p><p data-reactid="140"><!-- react-text: 141 -->By default, height depends on width, but width does not depend on height. Passing a value to <!-- /react-text --><code data-reactid="142"><!-- react-text: 143 -->width<!-- /react-text --></code><!-- react-text: 144 --> will make <!-- /react-text --><code data-reactid="145"><!-- react-text: 146 -->height<!-- /react-text --></code><!-- react-text: 147 --> half of the new width. Passing a value to <!-- /react-text --><code data-reactid="148"><!-- react-text: 149 -->height<!-- /react-text --></code><!-- react-text: 150 --> will not affect <!-- /react-text --><code data-reactid="151"><!-- react-text: 152 -->width<!-- /react-text --></code><!-- react-text: 153 -->, which will still be as wide as the text column.<!-- /react-text --></p><p data-reactid="154"><!-- react-text: 155 -->To enforce a ratio, you can pass a number to <!-- /react-text --><code data-reactid="156"><!-- react-text: 157 -->ratio<!-- /react-text --></code><!-- react-text: 158 -->, i.e. the expression <!-- /react-text --><code data-reactid="159"><!-- react-text: 160 -->ratio:`3/1`<!-- /react-text --></code><!-- react-text: 161 --> will produce a sketch with a width three times the height.<!-- /react-text --></p><p data-reactid="162"><!-- react-text: 163 -->If no width is defined, but a height is, width depends on height (as you can see below, this part is still a bit buggy). If a ratio, width and height are defined, height is overridden to depend on width.<!-- /react-text --></p><!-- react-empty: 164 --><!-- react-empty: 165 --><!-- react-empty: 166 --><!-- react-empty: 167 --><!-- react-empty: 168 --><!-- react-empty: 169 --><pre data-reactid="170"><code data-reactid="171"><!-- react-text: 172 -->[var name:&quot;sketch_ratio&quot; value:`(p5) =&gt; {
+Line Color: [Range min:0 max:255 value:lineColor /]<!-- /react-text --></code></pre><p data-reactid="116"><!-- react-text: 117 -->The sketch can use the <!-- /react-text --><code data-reactid="118"><!-- react-text: 119 -->updateProps<!-- /react-text --></code><!-- react-text: 120 --> option to trigger an update in an Idyll variable. Click on the
+sketch to make it invert its colors.<!-- /react-text --></p><span style="color:red;font-style:italic;" data-reactid="121"><!-- react-text: 122 -->[mathisonian note]: <!-- /react-text --><p data-reactid="123"><!-- react-text: 124 -->
+Right now you have to pass in the property explicity if you
+want Idyll to be able to modify it. Thats why <!-- /react-text --><code data-reactid="125"><!-- react-text: 126 -->clickBgColor<!-- /react-text --></code><!-- react-text: 127 --> and <!-- /react-text --><code data-reactid="128"><!-- react-text: 129 -->clickLineColor<!-- /react-text --></code><!-- react-text: 130 --> are provided to the
+Sketch component. I think this is something that should be updated in Idyll.<!-- /react-text --></p></span><div data-reactid="131"></div><!-- react-empty: 132 --><pre data-reactid="133"><code data-reactid="134"><!-- react-text: 135 -->[var name:&quot;clickBgColor&quot; value:0 /]
+[var name:&quot;clickLineColor&quot; value:255 /]
+
+[Sketch
+  clickBgColor:clickBgColor
+  clickLineColor:clickLineColor
+  sketch:`(p5, { width, height, updateProps }) =&gt; {
+    let size = 25;
+    p5.draw = () =&gt; {
+      p5.fill(clickBgColor, 16);
+      p5.noStroke();
+      p5.rect(0, 0, width, height);
+      size = 40 + 10*p5.sin(p5.frameCount * p5.PI / 60);
+      p5.stroke(clickLineColor);
+      p5.strokeWeight(size);
+      p5.line(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
+    };
+
+    p5.mouseClicked = () =&gt; {
+      updateProps({ clickBgColor: 255 - clickBgColor, clickLineColor: 255 - clickLineColor })
+    }
+}` /]<!-- /react-text --></code></pre><h1 data-reactid="136"><!-- react-text: 137 -->Sketch size and ratio<!-- /react-text --></h1><p data-reactid="138"><!-- react-text: 139 -->By default, the width of the sketch is equal to column width of the text, and height will be half of the width.<!-- /react-text --></p><p data-reactid="140"><!-- react-text: 141 -->You can pass a value to <!-- /react-text --><code data-reactid="142"><!-- react-text: 143 -->width<!-- /react-text --></code><!-- react-text: 144 --> and <!-- /react-text --><code data-reactid="145"><!-- react-text: 146 -->height<!-- /react-text --></code><!-- react-text: 147 --> to override this. The value can be the number of pixels like <!-- /react-text --><code data-reactid="148"><!-- react-text: 149 -->100<!-- /react-text --></code><!-- react-text: 150 -->, or a CSS-valid string like <!-- /react-text --><code data-reactid="151"><!-- react-text: 152 -->&quot;50%&quot;<!-- /react-text --></code><!-- react-text: 153 --> or <!-- /react-text --><code data-reactid="154"><!-- react-text: 155 -->&quot;2em&quot;<!-- /react-text --></code><!-- react-text: 156 -->.<!-- /react-text --></p><p data-reactid="157"><!-- react-text: 158 -->By default, height depends on width, but width does not depend on height. Passing a value to <!-- /react-text --><code data-reactid="159"><!-- react-text: 160 -->width<!-- /react-text --></code><!-- react-text: 161 --> will make <!-- /react-text --><code data-reactid="162"><!-- react-text: 163 -->height<!-- /react-text --></code><!-- react-text: 164 --> half of the new width. Passing a value to <!-- /react-text --><code data-reactid="165"><!-- react-text: 166 -->height<!-- /react-text --></code><!-- react-text: 167 --> will not affect <!-- /react-text --><code data-reactid="168"><!-- react-text: 169 -->width<!-- /react-text --></code><!-- react-text: 170 -->, which will still be as wide as the text column.<!-- /react-text --></p><p data-reactid="171"><!-- react-text: 172 -->To enforce a ratio, you can pass a number to <!-- /react-text --><code data-reactid="173"><!-- react-text: 174 -->ratio<!-- /react-text --></code><!-- react-text: 175 -->, i.e. the expression <!-- /react-text --><code data-reactid="176"><!-- react-text: 177 -->ratio:`3/1`<!-- /react-text --></code><!-- react-text: 178 --> will produce a sketch with a width three times the height.<!-- /react-text --></p><p data-reactid="179"><!-- react-text: 180 -->If no width is defined, but a height is, width depends on height (as you can see below, this part is still a bit buggy). If a ratio, width and height are defined, height is overridden to depend on width.<!-- /react-text --></p><!-- react-empty: 181 --><!-- react-empty: 182 --><!-- react-empty: 183 --><!-- react-empty: 184 --><!-- react-empty: 185 --><!-- react-empty: 186 --><pre data-reactid="187"><code data-reactid="188"><!-- react-text: 189 -->[var name:&quot;sketch_ratio&quot; value:`(p5) =&gt; {
   p5.setup = () =&gt; {
     p5.noLoop();
   };
@@ -122,7 +147,7 @@ Line Color: [Range min:0 max:255 value:lineColor /]<!-- /react-text --></code></
 [Sketch
   ratio:`2/1`
   height:50
-  sketch:sketch_ratio /]<!-- /react-text --></code></pre><h1 data-reactid="173"><!-- react-text: 174 -->Manually triggered resets<!-- /react-text --></h1><p data-reactid="175"><!-- react-text: 176 -->A <!-- /react-text --><code data-reactid="177"><!-- react-text: 178 -->watchedVal<!-- /react-text --></code><!-- react-text: 179 --> triggers a reset of the sketch whenever the value it watches is changed:<!-- /react-text --></p><div data-reactid="180"><!-- react-empty: 181 --><button data-reactid="182"><!-- react-text: 183 -->Reset Sketch!<!-- /react-text --></button></div><pre data-reactid="184"><code data-reactid="185"><!-- react-text: 186 -->[var name:&quot;resetSketch&quot; value:0 /]
+  sketch:sketch_ratio /]<!-- /react-text --></code></pre><h1 data-reactid="190"><!-- react-text: 191 -->Manually triggered resets<!-- /react-text --></h1><p data-reactid="192"><!-- react-text: 193 -->A <!-- /react-text --><code data-reactid="194"><!-- react-text: 195 -->watchedVal<!-- /react-text --></code><!-- react-text: 196 --> triggers a reset of the sketch whenever the value it watches is changed:<!-- /react-text --></p><div data-reactid="197"><!-- react-empty: 198 --><button data-reactid="199"><!-- react-text: 200 -->Reset Sketch!<!-- /react-text --></button></div><pre data-reactid="201"><code data-reactid="202"><!-- react-text: 203 -->[var name:&quot;resetSketch&quot; value:0 /]
 [var name:&quot;sketch_reset&quot; value:`(p5, {width, height}) =&gt; {
   let x = width/2, y = height/2, dx = 0;
 
